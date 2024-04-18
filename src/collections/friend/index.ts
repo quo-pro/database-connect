@@ -1,0 +1,1 @@
+export { FriendModel } from './schema';

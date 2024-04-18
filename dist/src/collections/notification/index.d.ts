@@ -1,0 +1,1 @@
+export { NotificationModel } from './schema';

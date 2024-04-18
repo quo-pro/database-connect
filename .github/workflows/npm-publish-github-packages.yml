@@ -1,0 +1,76 @@
+name: quo-pro database-connect CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  prepare-release:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.package_version.outputs.version }}
+      tag_exists: ${{ steps.check_tag.outputs.exists }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Get version from package.json
+        id: package_version
+        run: echo "::set-output name=version::$(node -p "require('./package.json').version")"
+
+      - name: Check if tag exists
+        id: check_tag
+        run: |
+          if git rev-parse "${{ steps.package_version.outputs.version }}" >/dev/null 2>&1; then
+            echo "::set-output name=exists::true"
+          else
+            echo "::set-output name=exists::false"
+          fi
+
+  create-release:
+    needs: prepare-release
+    runs-on: ubuntu-latest
+    if: needs.prepare-release.outputs.tag_exists == 'false'
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Create tag
+        run: |
+          git tag ${{ needs.prepare-release.outputs.version }}
+          git push origin ${{ needs.prepare-release.outputs.version }}
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ needs.prepare-release.outputs.version }}
+          release_name: Release ${{ needs.prepare-release.outputs.version }}
+          draft: false
+          prerelease: false
+
+  publish-gpr:
+    needs: create-release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - name: Set up authentication
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" >> .npmrc
+          echo "@quo-pro:registry=https://npm.pkg.github.com/" >> .npmrc
+      - run: npm ci
+      - name: Extract version from package.json
+        run: echo "NPM_PACKAGE_VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
+      - name: Publish Package to GitHub Packages
+        run: npm publish

@@ -1,0 +1,22 @@
+{
+  "name": "@quo-pro/database-connect",
+  "version": "0.0.1",
+  "description": "quo-pro collections schema and database connection",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {},
+  "keywords": [],
+  "author": "Israel Ayokunnu",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quo-pro/database-connect"
+  },
+  "dependencies": {
+    "@quo-pro/commons": "^0.0.2",
+    "mongoose": "^6.11.2"
+  }
+}

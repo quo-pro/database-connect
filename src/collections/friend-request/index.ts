@@ -1,0 +1,1 @@
+export { FriendRequestModel } from './schema';
