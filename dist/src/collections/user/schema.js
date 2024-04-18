@@ -6,7 +6,6 @@ const mongoose_1 = require("mongoose");
 const Model = new mongoose_1.Schema({
     email: {
         type: mongoose_1.Schema.Types.String,
-        unique: true,
         required: false,
     },
     roles: {
