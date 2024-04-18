@@ -21,3 +21,5 @@ __exportStar(require("./src/collections/user"), exports);
 __exportStar(require("./src/collections/friend"), exports);
 __exportStar(require("./src/collections/friend-request"), exports);
 __exportStar(require("./src/collections/notification"), exports);
+__exportStar(require("./src/collections/post"), exports);
+__exportStar(require("./src/collections/comment"), exports);
