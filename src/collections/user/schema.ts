@@ -6,7 +6,7 @@ const Model = new Schema<IUser>(
     email: {
       type: Schema.Types.String,
       unique: true,
-      required: true,
+      required: false,
     },
     roles: {
       type: [Schema.Types.String],

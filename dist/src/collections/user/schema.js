@@ -7,7 +7,7 @@ const Model = new mongoose_1.Schema({
     email: {
         type: mongoose_1.Schema.Types.String,
         unique: true,
-        required: true,
+        required: false,
     },
     roles: {
         type: [mongoose_1.Schema.Types.String],
