@@ -6,6 +6,12 @@ const Model = new mongoose_1.Schema({
     UUID: {
         type: String,
         required: true,
+        unique: true
+    },
+    userName: {
+        type: String,
+        required: true,
+        unique: true
     },
     user: {
         type: mongoose_1.Schema.Types.ObjectId,

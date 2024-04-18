@@ -6,6 +6,12 @@ const Model = new Schema<IAuth>(
     UUID: {
       type: String,
       required: true,
+      unique: true
+    },
+    userName: {
+      type: String,
+      required: true,
+      unique: true
     },
     user: {
       type: Schema.Types.ObjectId,
