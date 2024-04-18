@@ -1,6 +1,6 @@
 {
   "name": "@quo-pro/database-connect",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "quo-pro collections schema and database connection",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,7 @@
     "url": "https://github.com/quo-pro/database-connect"
   },
   "dependencies": {
-    "@quo-pro/commons": "^0.0.3",
+    "@quo-pro/commons": "^0.0.4",
     "mongoose": "^6.11.2"
   }
 }
