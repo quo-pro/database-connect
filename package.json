@@ -1,6 +1,6 @@
 {
   "name": "@quo-pro/database-connect",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "quo-pro collections schema and database connection",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
