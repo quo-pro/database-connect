@@ -4,6 +4,10 @@ exports.UserModel = void 0;
 const commons_1 = require("@quo-pro/commons");
 const mongoose_1 = require("mongoose");
 const Model = new mongoose_1.Schema({
+    userName: {
+        type: mongoose_1.Schema.Types.String,
+        required: true,
+    },
     email: {
         type: mongoose_1.Schema.Types.String,
         required: false,

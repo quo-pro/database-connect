@@ -3,6 +3,10 @@ import { Schema, model } from "mongoose";
 
 const Model = new Schema<IUser>(
   {
+    userName: {
+      type: Schema.Types.String,
+      required: true,
+    },
     email: {
       type: Schema.Types.String,
       required: false,
