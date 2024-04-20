@@ -7,3 +7,4 @@ export * from './src/collections/friend-request';
 export * from './src/collections/notification';
 export * from './src/collections/post';
 export * from './src/collections/comment';
+export * from './src/collections/blocked-user';

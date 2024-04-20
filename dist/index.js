@@ -23,3 +23,4 @@ __exportStar(require("./src/collections/friend-request"), exports);
 __exportStar(require("./src/collections/notification"), exports);
 __exportStar(require("./src/collections/post"), exports);
 __exportStar(require("./src/collections/comment"), exports);
+__exportStar(require("./src/collections/blocked-user"), exports);

@@ -1,0 +1,1 @@
+export { BlockedUserModel } from './schema';
