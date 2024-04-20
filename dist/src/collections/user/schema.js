@@ -32,5 +32,9 @@ const Model = new mongoose_1.Schema({
         type: mongoose_1.Schema.Types.Boolean,
         default: false,
     },
+    followCount: {
+        type: mongoose_1.Schema.Types.Number,
+        default: 0,
+    },
 }, { timestamps: true });
 exports.UserModel = (0, mongoose_1.model)("User", Model);

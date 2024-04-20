@@ -31,6 +31,10 @@ const Model = new Schema<IUser>(
       type: Schema.Types.Boolean,
       default: false,
     },
+    followCount: {
+      type: Schema.Types.Number,
+      default: 0,
+    },
   },
   { timestamps: true }
 );
