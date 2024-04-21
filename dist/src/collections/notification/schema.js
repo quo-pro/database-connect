@@ -24,7 +24,7 @@ const Model = new mongoose_1.Schema({
         required: true,
         enum: commons_1.NOTIFICATION_STATUS_LIST
     },
-    ref: {
+    triggerRecordId: {
         type: mongoose_1.Schema.Types.String,
         required: true,
     },

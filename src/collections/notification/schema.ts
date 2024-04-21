@@ -23,7 +23,7 @@ const Model = new Schema<INotification>(
       required: true,
       enum: NOTIFICATION_STATUS_LIST
     },
-    ref: {
+    triggerRecordId: {
       type: Schema.Types.String,
       required: true,
     },
