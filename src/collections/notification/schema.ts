@@ -8,6 +8,11 @@ const Model = new Schema<INotification>(
       required: true,
       ref: 'User'
     },
+    sentBy: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: 'User'
+    },
     type: {
       type: Schema.Types.String,
       required: true,
