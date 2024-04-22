@@ -10,4 +10,4 @@ export * from './src/collections/comment';
 export * from './src/collections/blocked-user';
 export * from './src/collections/channel';
 export * from './src/collections/message';
-
+export * from './src/collections/flagged-content';

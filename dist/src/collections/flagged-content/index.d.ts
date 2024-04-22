@@ -1,0 +1,1 @@
+export { FlaggedContentModel } from './schema';

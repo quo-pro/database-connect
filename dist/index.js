@@ -26,3 +26,4 @@ __exportStar(require("./src/collections/comment"), exports);
 __exportStar(require("./src/collections/blocked-user"), exports);
 __exportStar(require("./src/collections/channel"), exports);
 __exportStar(require("./src/collections/message"), exports);
+__exportStar(require("./src/collections/flagged-content"), exports);
