@@ -16,7 +16,7 @@
     "url": "https://github.com/quo-pro/database-connect"
   },
   "dependencies": {
-    "@quo-pro/commons": "^0.0.20",
+    "@quo-pro/commons": "^0.0.23",
     "mongoose": "^6.11.2"
   }
 }

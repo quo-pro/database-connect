@@ -8,3 +8,5 @@ export * from './src/collections/notification';
 export * from './src/collections/post';
 export * from './src/collections/comment';
 export * from './src/collections/blocked-user';
+export * from './src/collections/channel';
+export * from './src/collections/message';
