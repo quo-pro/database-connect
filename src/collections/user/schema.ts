@@ -7,6 +7,9 @@ const Model = new Schema<IUser>(
       type: Schema.Types.String,
       required: true,
     },
+    statusMessage: {
+      type: Schema.Types.String,
+    },
     email: {
       type: Schema.Types.String,
       required: false,

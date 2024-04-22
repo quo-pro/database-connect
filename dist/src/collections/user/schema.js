@@ -8,6 +8,9 @@ const Model = new mongoose_1.Schema({
         type: mongoose_1.Schema.Types.String,
         required: true,
     },
+    statusMessage: {
+        type: mongoose_1.Schema.Types.String,
+    },
     email: {
         type: mongoose_1.Schema.Types.String,
         required: false,
