@@ -11,7 +11,7 @@ const Model = new mongoose_1.Schema({
     },
     content: {
         type: mongoose_1.Schema.Types.String,
-        required: true,
+        required: false,
     },
     visibility: {
         type: mongoose_1.Schema.Types.String,

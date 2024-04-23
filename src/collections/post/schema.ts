@@ -10,7 +10,7 @@ const Model = new Schema<IPost>(
     },
     content: {
       type: Schema.Types.String,
-      required: true,
+      required: false,
     },
     visibility: {
       type: Schema.Types.String,
