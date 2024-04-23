@@ -17,6 +17,11 @@ const Model = new Schema<IPost>(
       required: true,
       enum: POST_VISIBILITY
     },
+    media: [
+      {
+        type: Schema.Types.String,
+      }
+    ],
   },
   { timestamps: true }
 );

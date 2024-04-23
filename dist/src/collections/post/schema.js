@@ -18,5 +18,10 @@ const Model = new mongoose_1.Schema({
         required: true,
         enum: commons_1.POST_VISIBILITY
     },
+    media: [
+        {
+            type: mongoose_1.Schema.Types.String,
+        }
+    ],
 }, { timestamps: true });
 exports.PostModel = (0, mongoose_1.model)("Post", Model);
