@@ -23,5 +23,6 @@ const Model = new mongoose_1.Schema({
             type: mongoose_1.Schema.Types.String,
         }
     ],
+    editorContent: [],
 }, { timestamps: true });
 exports.PostModel = (0, mongoose_1.model)("Post", Model);

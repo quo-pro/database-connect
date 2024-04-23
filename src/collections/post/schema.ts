@@ -22,6 +22,7 @@ const Model = new Schema<IPost>(
         type: Schema.Types.String,
       }
     ],
+    editorContent: [],
   },
   { timestamps: true }
 );
